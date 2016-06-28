@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6FCD507-37E7-4A7E-8DF9-D8FCE3FF110D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VsBlox.Mvc.Templates</RootNamespace>
+    <AssemblyName>VsBlox.Mvc.Templates</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.0.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormsAndTemplates\Config\TemplateConfig.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Attributes\DateTimeFormatAttribute.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Attributes\DisabledAttribute.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Attributes\HtmlAttributesAttribute.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Attributes\IgnoreInFormAttribute.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Attributes\RadioButtonsAttribute.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Body\Body.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Body\BodyBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Body\ItemTemplates\ItemTemplates.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Body\ItemTemplates\ItemTemplatesBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Body\PropertyInfo\PropertyInfo.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Body\PropertyInfo\PropertyInfoBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\FormBodyForBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\FormForBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\Buttons\Buttons.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\Buttons\ButtonsBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\Buttons\Button\Button.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\Buttons\Button\ButtonBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\Form.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\FormBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\Model\Model.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Form\Model\ModelBuilder.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Helpers\DropDownListExtensions.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Helpers\PropertyInfoExtensions.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Helpers\RouteValueDictionaryExtensions.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderBody.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderBool.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderDateTime.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderDropDownGroupedList.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderDropDownList.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderEnum.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderForm.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderHiddenProperties.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderInt.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderProperty.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderString.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderUiHint.cs" />
+    <Compile Include="FormsAndTemplates\FormFor\Render\RenderValidationSummary.cs" />
+    <Compile Include="FormsAndTemplates\Helpers\DynamicLinq.cs" />
+    <Compile Include="FormsAndTemplates\Helpers\IHideObjectMembers.cs" />
+    <Compile Include="FormsAndTemplates\Helpers\RenderContext.cs" />
+    <Compile Include="FormsAndTemplates\Helpers\TypeHelper.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Form\Form.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Form\FormBuilder.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\KendoTemplateForBuilder.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\KendoTemplateForDialogMode.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Render\RenderDisplayNamePlaceholders.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Render\RenderForm.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Render\RenderScript.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Render\RenderTemplate.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Render\RenderWindow.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Script\Events\Events.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Script\Events\EventsBuilder.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Script\Script.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Script\ScriptBuilder.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Template\Template.cs" />
+    <Compile Include="FormsAndTemplates\KendoTemplateFor\Template\TemplateBuilder.cs" />
+    <Compile Include="FormsAndTemplates\LambdaHtmlHelper\LambdaHtmlHelper.cs" />
+    <Compile Include="HtmlHelperExtensions.cs" />
+    <Compile Include="JsObjectFor\Builder1.cs" />
+    <Compile Include="JsObjectFor\Builder2.cs" />
+    <Compile Include="JsObjectFor\Builder3.cs" />
+    <Compile Include="JsObjectFor\Builder4.cs" />
+    <Compile Include="JsObjectFor\Builder5.cs" />
+    <Compile Include="JsObjectFor\Builder6.cs" />
+    <Compile Include="JsObjectFor\JsObjectBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
